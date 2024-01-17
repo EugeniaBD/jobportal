@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('layouts/header') -%>
+    </head>
+
+    <body>
+        <div class="container-xxl bg-white p-0">
+            <!-- Spinner Start -->
+            <div id="spinner"
+                class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary"
+                    style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+
+            <!-- Navbar Start -->
+            <%- include('layouts/navbar'); -%>
+            <!-- Navbar End -->
+
+            <!-- Header End -->
+            <div class="container-xxl py-5 bg-dark page-header mb-5">
+                <div class="container my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Login</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active"
+                                aria-current="page">Log in</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Header End -->
+
+            <section class="h-100 gradient-form" style="background-color: #eee;">
+                <div class="container py-5 h-100">
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-10">
+                      <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                          <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+            
+              
+                              <form action ='/login' method ='POST'>
+                                <p>Please login to your account</p>
+
+              
+                                <div class="form-outline mb-4">
+                                  <input type="email" id="email" name="email" class="form-control" placeholder="email address" required />
+                                  <label class="form-label" for="email"></label>
+                                  <p style="color:red"><%= invalidemail %></p>
+
+                                </div>
+              
+                                <div class="form-outline mb-4">
+                                  <input type="password" id="password" name="password" class="form-control" 
+                                  placeholder="password" required/>
+                                  <label class="form-label" for="password"></label>
+                                  <p style="color:red"><%= invalidpassword %></p>
+
+                                </div>
+              
+                                <div class="text-center pt-1 mb-5 pb-1">
+                                  <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
+                                    in</button>
+                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
+                                </div>
+                              </form>
+                              <form action ='/register'>
+                                <div class="d-flex align-items-center justify-content-center pb-4">
+                                  <p class="mb-0 me-2">Don't have an account?</p>
+                                  <button type="submit" class="btn btn-outline-success">Register</button>
+                                </div>
+                              </form>
+                              
+                            </div>
+                          </div>
+                          <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                              <h4 class="mb-4">We are more than just a company</h4>
+                              <p class="small mb-0">Step into our job portal, where a myriad of career opportunities awaits your exploration! Unlock your potential by becoming part of our diverse professional community. Embark on a path to a fulfilling career by filling out the registration form below, opening the door to a realm of thrilling job possibilities.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            <!-- Contact End -->
+
+            <!-- Footer Start -->
+            <%- include('layouts/footer'); -%>
+            <!-- Footer End -->
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+                    class="bi bi-arrow-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <%- include('layouts/script') -%>
+
+    </html>

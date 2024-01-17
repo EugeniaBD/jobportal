@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('layouts/header') -%>
+    </head>
+
+    <body>
+        <div class="container-xxl bg-white p-0">
+            <!-- Spinner Start -->
+            <div id="spinner"
+                class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary"
+                    style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+
+            <!-- Navbar Start -->
+            <%- include('layouts/navbar'); -%>
+            <!-- Navbar End -->
+
+            <!-- Header End -->
+            <div class="container-xxl py-5 bg-dark page-header mb-5">
+                <div class="container my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Post
+                        a job</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active"
+                                aria-current="page">Add a new vacancy</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Header End -->
+
+            <!-- Contact Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <h1 class="text-center mb-5 wow fadeInUp"
+                        data-wow-delay="0.1s">New vacancy form</h1>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="row gy-4">
+                                <div class="col-md-4 wow fadeIn"
+                                    data-wow-delay="0.3s">
+                                </div>
+                                <div class="col-md-4 wow fadeIn">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wow fadeInUp" data-wow-delay="0.5s">
+                            <p class="mb-4">The contact form is currently
+                                inactive. Get a functional and working
+                                contact form with Ajax & PHP in a few
+                                minutes. Just copy and paste the files, add
+                                a little code and you're done. <a
+                                    href="https://htmlcodex.com/contact-form">Download
+                                    Now</a>.</p>
+                            <form action="/insertjob" method ="POST" enctype="multipart/form-data">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text"
+                                                class="form-control"
+                                                id="job_title"
+                                                name="job_title"
+                                                placeholder="Job name">
+                                            <label for="job_title">Job_Title</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="dept" name="dept">
+                                                <option value=""></option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="Customer Service">Customer Service</option>
+                                                <option value="Project Management">Project Management</option>
+                                                <option value="Sales & Communication">Sales & Communication</option>
+                                                <option value="Human Resources">Human Resources</option>
+                                                <option value="Teaching & Education">Teaching & Education</option>
+                                            </select>
+                                            <label for="Job_department">Job_Department</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="employment_type" name="employment_type">
+                                                <option value="Full-Time">Full-Time</option>
+                                                <option value="Part-Time">Part-Time</option>
+                                            </select>
+                                            <label for="employment_type">Employment_Type</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="salary_currency" name="salary_currency">
+                                                <option value="GBP">GBP</option>
+                                                <option value="EUR">EUR</option>
+                                                <option value="USD">USD</option>
+                                            </select>
+                                            <label for="salary_currency">Currency</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text"
+                                                class="form-control"
+                                                id ="Salary"
+                                                name ="Salary"
+                                                placeholder="Salary">
+                                            <label for="Salary">Salary</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <input type="text"
+                                                class="form-control"
+                                                id="Employee_residence"
+                                                name="Employee_residence"
+                                                placeholder="Employee_residence">
+                                            <label for="Employee_residence">Employee Residence</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="experience_level" name="experience_level">
+                                                <option value="Senior">Senior</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="Entry">Entry</option>
+                                                <option value="Graduate">Graduate</option>
+                                            </select>
+                                            <label for="experience_level">Experience Level</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text"
+                                                class="form-control"
+                                                id="company_location"
+                                                name="company_location"
+                                                placeholder="company_location">
+                                            <label for="company_location">Company Location</label>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="company_size" name="company_size">
+                                                <option value="Large">Large</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="Small">Small</option>
+                                            </select>
+                                            <label for="company_size">Company Size</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <input type="file"
+                                                class="form-control"
+                                                id="logo"
+                                                name="logo"
+                                                placeholder="logo"> 
+                                            <label for="logo">Upload logo</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="date"
+                                                class="form-control"
+                                                id="deadline"
+                                                name="deadline"
+                                                placeholder="Deadline">
+                                            <label for="deadline">Deadline</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <button
+                                            class="btn btn-primary w-100 py-3"
+                                            type="submit">Post vacancy</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Contact End -->
+
+            <!-- Footer Start -->
+            <%- include('layouts/footer'); -%>
+            <!-- Footer End -->
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+                    class="bi bi-arrow-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <%- include('layouts/script') -%>
+
+    </html>

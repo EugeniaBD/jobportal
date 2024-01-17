@@ -1,0 +1,75 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/lib/wow/wow.min.js"></script>
+<script src="/lib/easing/easing.min.js"></script>
+<script src="/lib/waypoints/waypoints.min.js"></script>
+<script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="/js/main.js"></script>
+
+<script>
+    // Get the h1 - element by its ID
+    var jobEntry = document.getElementById('jobEntry');
+
+    // Add a click event listener
+    jobEntry.addEventListener('click', function() {
+      // when click on title it redirects to the index page
+      window.location.href = "/";
+    });
+  </script>
+
+
+<!-- Script to filter the jobs by dept on the index page -->
+<script>
+  // Initialize filterbydept list
+  var filterbydept = [];
+
+  // Call filterJobs function on page load to apply default selection
+  document.addEventListener('DOMContentLoaded', function() {
+      filterJobs(document.querySelector('.cat-item[data-value="All Jobs"]'));
+  });
+
+  function filterJobs(element) {
+      var selectedCategory = element.getAttribute('data-value');
+
+      // Get all category items
+      var categoryItems = document.querySelectorAll('.cat-item');
+
+      // Loop through category items and update the selected class
+      for (var i = 0; i < categoryItems.length; i++) {
+          if (categoryItems[i] === element) {
+              categoryItems[i].classList.add('selected');
+          } else {
+              categoryItems[i].classList.remove('selected');
+          }
+      }
+
+      // Get all job items
+      var jobItems = document.querySelectorAll('.dept');
+
+      // Clear filterbydept list
+      filterbydept = [];
+
+      // Loop through job items and filter based on the selected category
+      for (var i = 0; i < jobItems.length; i++) {
+          var jobCategory = jobItems[i].getAttribute('data-dept');
+
+          if (selectedCategory === 'All Jobs' || selectedCategory === jobCategory) {
+              jobItems[i].style.display = 'block';
+              // Save matching job to filterbydept list
+              filterbydept.push(displayjobs[i]);
+          } else {
+              jobItems[i].style.display = 'none';
+          }
+      }
+
+      // Now, the filterbydept list contains the filtered jobs
+      console.log(filterbydept);
+  }
+</script>
+
+
+
+
+
