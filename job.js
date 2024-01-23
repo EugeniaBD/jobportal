@@ -258,7 +258,7 @@ app.get('/notfound', notfoundController)
 const port = process.env.PORT;
 const hostname = process.env.HOSTNAME;  
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
     console.log(`Server ${hostname} is running on port number ${port}`);
     console.log(`Server Url = https://${hostname}:${port}`);
 });
