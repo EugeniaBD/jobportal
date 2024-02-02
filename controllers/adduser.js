@@ -12,11 +12,9 @@ module.exports = async (req, res) => {
         });
 
         console.log("User registered successfully.");
-        // res.status(200).send("User registered successfully.");
+        res.redirect('loginform');
     } catch (error) {
         console.error('Error registering user:', error);
-        res.status(500).send('Internal Server Error');
+        res.status(500).send('User already registered. Try to  log in ');
     }
-
-    res.redirect ('loginform')
 };

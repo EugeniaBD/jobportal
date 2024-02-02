@@ -26,26 +26,37 @@
 
 # Introduction <a name="introduction"></a>
 
-In today's fast-paced world with rapid tech changes and a job market that keeps evolving, recent graduates face a tough challenge moving from school to work. The Graduates Job Portal project was born out of a need to help graduates connect with employers. Many grads struggle to find good jobs right after school because they lack experience and professional networks.
+In today's fast-paced world with rapid tech changes and a job market that keeps evolving, recent graduates face a tough challenge moving from school to work. The Graduates Job Portal project was created from to help graduates connect with employers. Many newly graduates struggle to find good jobs right after school because they lack experience and professional networks.
 
-The idea for the Graduates Job Portal came from noticing the gap between what new grads want and what employers are looking for. A lot of grads are caught in a tough spot where they need experience to get a job but need a job to gain experience. This reality, along with the frustration and untapped talents of many graduates, inspired this project.
+The idea for the Graduates Job Portal came from noticing the gap between what new graduates want and what employers are looking for. A lot of grads are caught in a tough spot where they need experience to get a job but need a job to gain experience. This reality, along with the frustration and untapped talents of many graduates, inspired this project.
 
 Creating a dedicated platform for graduates was motivated by a desire to tackle this common issue in a systematic way. Stats show that a significant number of recent grads face long periods of unemployment or not getting jobs that match their qualifications. The goal of the Graduates Job Portal is to change this pattern by giving employers an easy way to discover hidden talent and letting graduates showcase their skills and potential.
 
 # Background and Inspiration <a name="background-and-inspiration"></a>
 
-The genesis of the Graduates Job Portal can be traced back to the growing disparities between the aspirations of freshly graduated individuals...
+The "Graduates Job Portal" eases the transition from student life to the professional world for recent Solent Uni graduates. It provides a simple platform where students can display their skills and connect with potential employers, making the journey from academia to employment smoother.
 
 # Project Overview <a name="project-overview"></a>
 
-The Graduates Job Portal serves as a dynamic interface where employers seeking fresh perspectives and enthusiastic individuals in pursuit of meaningful employment converge...
+For Solent Uni graduates, the struggle to secure a job post-graduation is a familiar challenge. Limited experience and a lack of professional connections often act as barriers to immediate employment. Recognizing this plight, the Graduates Job Portal steps in as a crucial solution, addressing the unique needs of Solent Uni graduates.
+
+The project's importance lies in its ability to provide a dedicated space for fresh graduates to break the paradoxical cycle of needing experience to secure a job and needing a job to gain experience. This innovative platform empowers Solent Uni graduates to showcase their talents, making them visible to employers eager to discover untapped potential.
 
 # Key Design Decisions<a name="key_design_decisions"></a>
 You should rationalize the choices you made in designing your application.
 
 # Database Design <a name="database_design"></a>
 
-This section will document the different database entities and how they are related. You may want to include an entity relationship diagram to show how the tables are related and difference between NoSQL and SQL databases 
+Job Portal uses Mongo DB data base (MongoDB Altlas, Mongo DB Compass).MongoDB is classified as a NoSQL database, suitable for applications with large amounts of unstructured or semi-structured data. Compared to a SQL type database, Jobportal database has few distinguishfeatures:
+
+**Flexible Schema:** allows dynamic and flexible schema design, accommodating variations in data structure.
+
+**Document-Oriented:** Data is stored in BSON (binary JSON) documents, making it easy to represent complex relationships.
+
+**Scalability:** Jobportal is horizontally scalable, supporting the growth of data and high traffic.
+
+**NoSQL:** Jopportal database is classified as a NoSQL database, suitable for applications with large amounts of unstructured or semi-structured data.
+
 
 # Security and Scalability <a name="security_and_scalability"></a>
 
