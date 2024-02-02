@@ -40,6 +40,7 @@ app.use(bodyParser.json())
 //Import mongoose after the instalation
 const mongoose = require('mongoose')
 
+
 //connection to mongodb
 
 //replace localhost with 127.0.0.1 if does not work 
