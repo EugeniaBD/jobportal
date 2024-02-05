@@ -43,6 +43,11 @@ Press 'Win'+ 'R' to open Command Prompt, type 'cmd' and press'Enter' key. Follow
 ```cd <your-project-name>```
 
 **3. Install Dependencies:** 
+Before you begin, ensure you have met the following requirements:
+
+- [Node.js](https://nodejs.org/) installed on your machine.
+- [npm](https://www.npmjs.com/) (Node Package Manager) installed.
+- [MongoDB](https://www.mongodb.com/) database set up (if applicable).
 
 Open the project Folder using Visual Studio code. Open a new terminal. and write the code below:
 
