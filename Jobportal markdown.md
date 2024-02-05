@@ -23,44 +23,54 @@ In today's fast-paced world characterized by rapid technological advancements an
 ## Background and Inspiration
 The "Graduates Job Portal" provides a straightforward platform where students can showcase their skills and connect with potential employers, easing the journey from studies to employment.
 
-The creation of this dedicated platform for graduates derived from the need to systematically address a common issue. Statistical data highlights that a significant number of recent graduates experience extended periods of unemployment or difficulty finding positions that align with their qualifications. The primary goal of the Graduates Job Portal is to break this cycle, offering employers an avenue to discover hidden talent while empowering graduates to effectively showcase their skills and untapped potential.
+The creation of this dedicated platform for graduates derived from the need to systematically address a common issue. Statistical data highlights that a significant number of recent graduates experience extended periods of unemployment or difficulty finding positions that align with their qualifications. The primary goal of the Graduates Job Portal is to break this cycle, offering employers an opportunity to discover hidden talent while empowering graduates to effectively showcase their skills and untapped potential.
+
+![Job Portal main page](markdown/images/image6.png)
+Figure 1: Screenshot of the Job Portal main webpage
 
 ## Project Overview
-The project's significance lies in its ability to provide a dedicated space for fresh graduates to navigate the paradox of needing experience to secure a job and requiring a job to gain experience. This innovative platform empowers graduates to showcase their talents, making them visible to employers eager to discover untapped potential.
+The project's significance lies in its ability to provide a dedicated space for fresh graduates to navigate the paradox of needing experience to secure a job and requiring a job to gain experience. This innovative platform empowers graduates to showcase their talents, making them visible to employers. 
 
 ### Job Portal Design
-The Graduate Job Portal functions as a Node.js application, utilizing Express, Mongoose, and the EJS templating engine. Designed specifically for online job-seeking, especially post-graduation, its core purpose is to assist students in their job search endeavors.
+The Graduate Job Portal functions as a Node.js application, utilizing Express, Mongoose, and the EJS templating engine. Designed specifically for online job-seeking, especially post-graduation, its core purpose is to assist students in their job search process.
 
-![Screenshot of the Job Portal Interface](image-1.png)  
-**Figure 1: Screenshot of the Job Portal Interface**
+The Graduates Job Portal empowers users with the ability to seamlessly execute CRUD operations, enabling them to Create, Read, Update, and Delete job listings on MongoDB, Mongo DB Compass and MongoDB Atlas. Users can leverage the platform to create new job listings, contact submissions, user registrations, and testimonials. The Read operation allows users to access and review the comprehensive job list or their experience on the Graduate Job Portal. Additionally, the platform facilitates users in updating existing job listings and, if needed, deleting specific job entries, ensuring a dynamic and user-friendly experience.
+
+![Screenshot of the Job Portal Interface](markdown/images/image-1.png)  
+Figure 2: Screenshot of the Job Portal Interface
 
 Outlined below are the essential features of this application:
 
 1. **Server Configuration:** Express is employed to set up the server, facilitating functions such as providing access to static files, creating user sessions for authentication, and allowing users to upload files. The connection to MongoDB, managed by Mongoose, prioritizes security by obtaining the connection URI from environment variables. The 'JobList' model is incorporated to structure and organize job-related data. Additionally, the global variable 'loggedIn' is initiated and dynamically updated through middleware based on user sessions.
 
-2. **View Rendering:** EJS serves as the chosen view engine for creating dynamic and interactive interfaces. Routes and controllers play a pivotal role in managing various tasks, from displaying different web pages to processing data. The application collaborates with the 'JobList' model to oversee job-related data, and a designated endpoint ('/joblist') facilitates the exchange of job list items in JSON format.
+2. **View Rendering:** EJS serves as the chosen view engine for creating dynamic and interactive interfaces. Routes and controllers play a central role in managing various tasks, from displaying different web pages to processing data. The application collaborates with the 'JobList' model to oversee job-related data, and a designated endpoint ('/joblist') facilitates the exchange of job list items in JSON format. 
+Analogous models were generated for 'Users,' 'Contact Us,' and 'Testimonials' to define the attributes of the database collections.
 
 
-![JobPortal views](image-2.png)  
-**Figure 2: JobPortal controllers**
+![JobPortal views](markdown/images/image-2.png)  
+Figure 3: JobPortal controllers
 
-3. **Functionality Handling:** Routes and controllers are established to handle different aspects, including job applications, contact forms, and user registration. An effective error-handling system, featuring a 404 not found page, is implemented to address instances of undefined routes. The server configuration involves attentive listening on a specified port and hostname, enhancing adaptability and deployment options.
+3. **Functionality Handling:** Routes and controllers are established to handle different aspects, including job applications, contact forms, and user registration, load different forms for deleting, updating and retrieving data.  An effective error-handling system, featuring a '404 not found page', is implemented to address instances of undefined routes. The server configuration involves attentive listening on a specified port and hostname, enhancing adaptability and deployment options.
 
-4. **Logging Operations:** Logging, performed through console logs, serves to provide crucial feedback, indicating successful database connections and server startup. Jobportal proves to be a strong web server architecture using Express, with a focus on user authentication, seamless file uploads, and strategic interactions with MongoDB for effective management of job-related information.
+4. **Logging Operations:** Logging, performed through console logs, serves to provide crucial feedback, indicating successful database connections and server startup. Jobportal proves to have a good web server architecture using Express, with a focus on user authentication, seamless file uploads, and strategic interactions with MongoDB for effective management of job-related information.
 
 ### Database Design
-Job Portal uses the MongoDB database (MongoDB Atlas, MongoDB Compass). MongoDB is classified as a NoSQL database, suitable for applications with large amounts of unstructured or semi-structured data. The Job Portal database has distinct features compared to a SQL-type database:
+Job Portal uses the MongoDB database (MongoDB, MongoDB Atlas, MongoDB Compass). MongoDB is classified as a NoSQL database, suitable for applications with large amounts of unstructured or semi-structured data. The Job Portal database has distinct features compared to a SQL-type database:
 
 - **Flexible Schema:** Allows dynamic and flexible schema design, accommodating variations in data structure.
 - **Document-Oriented:** Data is stored in BSON (binary JSON) documents, making it easy to represent complex relationships.
 - **Scalability:** Job Portal is horizontally scalable, supporting the growth of data and high traffic.
 
-The job database was downloaded from https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries, small changes like delete some columns so that it will dosplaiy only UK based vacancies. 
 
-The Job Portal Database is structured into four collections: joblist, jobdept, register, and testimonials. These collections are utilized to store data from a JSP form using models. Models encapsulate the data structure, validation rules, and database interactions, promoting a clean and organized approach to working with MongoDB in a Node.js application.
+![Mongo DB](markdown/images/image.png)  
+Figure 4: JobPortal MongoDB connections
 
-![JobPortal Database Design](image-3.png)  
-**Figure 2: JobPortal database design**
+The job database was downloaded from https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries, small changes and ammendments  like removing some columns so that it will display only UK based vacancies. 
+
+The Job Portal Database is structured into five collections: joblist, jobdept, register, contactus and testimonials. These collections are utilized to store data from a JSP form using models. Models encapsulate the data structure, validation rules, and database interactions, promoting a clean and organized approach to working with MongoDB in a Node.js application.
+
+![JobPortal Database Design](markdown/images/image-3.png)  
+Figure 5: JobPortal database design
 
 ### Security and Scalability
 Job Portal prioritizes both security and scalability to ensure a robust and reliable platform.
@@ -68,7 +78,7 @@ Job Portal prioritizes both security and scalability to ensure a robust and reli
 #### Security Measures
 Job Portal employs a comprehensive set of security measures to safeguard user data and maintain the integrity of the system. This includes, but is not limited to:
 
-- **Data Encryption:** Sensitive information (eg: passwords) is encrypted using industry-standard encryption algorithms, ensuring confidentiality during transmission and storage.
+- **Data Encryption:** Utilizing industry-standard encryption algorithms, sensitive information such as passwords undergo encryption for enhanced security during transmission and storage. The implementation involves the 'bcrypt' library, as showcased in the login controller
 - **Authentication and Authorization:** Robust authentication mechanisms verify the identity of users, and authorization controls ensure that users have appropriate access levels.
 - **Regular Security Audits:** Periodic security audits are conducted to identify and address potential vulnerabilities. This proactive approach helps in staying ahead of evolving security threats.
 
@@ -83,24 +93,24 @@ Ensuring scalability is crucial for handling the growth of data and traffic. Job
 By combining robust security practices with scalable architecture, Job Portal aims to provide a secure and seamless experience for users while accommodating the growth and demands of the platform.
 
 ## Conclusions and Reflection
-The development of Job Portal has been a dynamic process, involving planning, implementation, and refinement.
+The development of Job Portal has been a dynamic and cyclic  process, involving: planning, implementation, testing and improvment.
 
 ### Achievements and Milestones
-The successful establishment of the Graduates Job Portal marks a noteworthy achievement. Serving as a pivotal link between graduates and potential employers, it significantly enhances the accessibility of job searching. Key accomplishments encompass:
+The successful establishment of the Graduates Job Portal marks a notable achievement. Serving as a pivotal link between graduates and potential employers, it significantly enhances the accessibility of job searching. Key accomplishments encompass:
 
 - **User-Focused Design:** The project prioritized crafting an intuitive and seamless experience for both job seekers and employers, emphasizing user satisfaction and ease of navigation.
-- **Robust Functionality:** The Job Portal stands out for its comprehensive functionality, offering vital features such as detailed job listings, streamlined application processes, and a secure user
-
- authentication system.
+- **Robust Functionality:** The Job Portal stands out for its comprehensive functionality, offering vital features such as detailed job listings, streamlined application processes, and a secure userauthentication system.
 - **Security Measures:** A focal point of the project has been ensuring the security of user information. This commitment is reflected in the implementation of rigorous security measures, including data encryption and regular security audits.
 - **Scalability:** Proactively addressing the potential for growth, the Job Portal is strategically designed for scalability. This ensures optimal performance, even in scenarios of heightened user traffic, demonstrating a commitment to accommodating increasing demands.
 
 ### Insights Gained
 This project provided valuable insights into web development, database design, and system scalability.
 
+The project stands out with the following features:
+
 - **Adaptability:** Being adaptable and open to changes based on feedback and evolving requirements is crucial.
 - **Collaboration:** Effective collaboration among team members and stakeholders is vital for a cohesive development process.
 - **Continuous Improvement:** Embracing continuous improvement allows for ongoing enhancements to the project.
 
 ### Prospects
-As this phase concludes, Job Portal reflects a commitment to innovation and effective problem-solving. Future opportunities for improvement include the addition of advanced search features, personalized user dashboards, and enhanced tools for employers. Staying updated with emerging technologies will further enhance the platform's performance, security, and user experience. Job Portal is not just a functional tool; it serves as a promoter for connecting graduates with opportunities, providing a foundation for successful career transitions in the future.
+Job Portal reflects a commitment to innovation and effective problem-solving. Future opportunities for improvement include the addition of advanced search features, personalized user dashboards, and enhanced tools for employers. Staying updated with emerging technologies will further enhance the platform's performance, security, and user experience. Job Portal is not just a functional tool; it serves as a promoter for connecting graduates with opportunities, providing a foundation for successful career transitions in the future. The Job Portal is horizontally scalable, with numerous enhancements planned for vertical scalability. These improvements include the ability to submit job applications, save CVs and cover letters, and enable job applicants to create a personal job seeker profile.
