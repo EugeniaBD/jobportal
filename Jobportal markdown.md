@@ -44,11 +44,19 @@ The project's importance lies in its ability to provide a dedicated space for fr
 
 The Graduate Job Portal functions as a Node.js application, employing Express, Mongoose, and the EJS templating engine. Designed specifically as an online platform for job-seeking, especially post-graduation, its core purpose is to assist students in their job search endeavors.
 
+![Screenshot of the Job Portal Interface](image-1.png)
+
+**Figure 1: Screenshot of the Job Portal Interface**
+
 Outlined below are the essential features of this application:
 
 **1. Server Configuration:** Express is used to set up the server, facilitating crucial functions such as providing access to static files, creating user sessions for  uthentication, and allowing users to upload files. The connection to MongoDB, managed by Mongoose, focuses on security by obtaining the connection URI from environment variables. The 'JobList' model is incorporated to structure and organize job-related data. Additionally, the global variable 'loggedIn' is initiated and dynamically updated through middleware based on user sessions.
 
 **2. View Rendering:** EJS serves as the chosen view engine for creating dynamic and interactive interfaces. Routes and controllers play a pivotal role in managing various tasks, from displaying different web pages to processing data. The application collaborates with the 'JobList' model to oversee job-related data, and a designated endpoint ('/joblist') facilitates the exchange of job list items in JSON format.
+
+![Screenshot of the Job Portal Controllers](image-2.png)
+
+**Figure 2: Controllers of the Job Portal Interface**
 
 **3.Functionality Handling:** Routes and controllers are established to handle different aspects, including job applications, contact forms, and user registration. An effective error-handling system, featuring a 404 not found page, is implemented to address instances of undefined routes. The server configuration involves attentive listening on a specified port and hostname, enhancing adaptability and deployment options.
 
