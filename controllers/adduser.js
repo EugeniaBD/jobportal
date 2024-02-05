@@ -16,5 +16,6 @@ module.exports = async (req, res) => {
     } catch (error) {
         console.error('Error registering user:', error);
         res.status(500).send('User already registered. Try to  log in ');
+        
     }
 };
