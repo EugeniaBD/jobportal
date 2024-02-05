@@ -1,4 +1,4 @@
-//make a story for that the project has a utility " Students from the Solent Uni can find jobs after graduation, why my app is important, mention from where I downloded the datatset and explain the datatset"
+
 //mongoose import after installation
 
 
@@ -20,6 +20,7 @@ app.use(session({
 }));
 
 
+// Configuration for environment variables
 const dotenv = require('dotenv')
 dotenv.config();
 // console.log(process.env)
