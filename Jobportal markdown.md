@@ -2,8 +2,8 @@
 **Project Title:** Graduates Job Portal  
 **Author:** Eugenia Stanciu  
 **Date:** February 2, 2024  
-**Website:** [Graduates Job Portal](#)  
-**GitHub Repository:** [Job Portal GitHub](#)
+**Website:** [Graduates Job Portal](https://graduatesjobportal.cyclic.app)  
+**GitHub Repository:** [Job Portal GitHub](https://github.com/EugeniaBD/jobportal)
 
 ## Table of Contents
 1. [Introduction](#introduction)
