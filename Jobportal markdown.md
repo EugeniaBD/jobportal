@@ -3,8 +3,9 @@
 **Author:** Eugenia Stanciu  
 **Date:** February 2, 2024  
 **Website (cyclic):** [Graduates Job Portal](https://graduatesjobportal.cyclic.app)  
-**Website (render):**[Graduates Job Portal](https://graduatesjobportal.cyclic.app)
+**Website (render):** [Graduates Job Portal](https://graduatesjobportal.cyclic.app)
 **GitHub Repository:** [Job Portal GitHub](https://eugenia-stanciu.onrender.com/)
+
 
 ## Table of Contents
 1. [Introduction](#introduction)
