@@ -1,7 +1,4 @@
 
-//mongoose import after installation
-
-
 const express = require('express')
 const path = require('path')
 
@@ -26,7 +23,7 @@ dotenv.config();
 // console.log(process.env)
 
 
-//upload a picture in the new insertjob form
+//facilitate picture upload on addjob, update job and add testimonial
 const fileUpload= require('express-fileupload')
 app.use(fileUpload())
 
@@ -83,7 +80,6 @@ app.use('*', (req, res, next) => {
 
 
 //define a middleware that runs for every request
-
 
 const ejs = require('ejs')
 app.set('view engine', 'ejs')
